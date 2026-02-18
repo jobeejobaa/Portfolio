@@ -1,0 +1,51 @@
+Johanna Delfieux Watts
+Développeuse Frontend Junior – JavaScript (ES6) & React
+📍 Paris
+📞 +33 6 86 69 98 36
+📧 johannadelfieux@gmail.com
+🔗 LinkedIn : linkedin.com/in/jdelfieux
+PROFIL
+Après 10 ans d’expérience en gestion commerciale, relation client et management d’équipe, je me reconvertis dans le développement frontend.
+Actuellement en formation en JavaScript ES6 et React, je développe des interfaces utilisateur claires, accessibles et maintenables.
+Mon parcours me permet d’allier compréhension des besoins utilisateurs, rigueur et capacité à collaborer efficacement avec des équipes techniques.
+Je recherche un poste de Développeuse Frontend Junior.
+COMPÉTENCES TECHNIQUES
+Développement Frontend
+HTML5 / CSS3
+JavaScript (ES6)
+React (composants, props, state, hooks – en formation)
+Gestion des événements
+Manipulation du DOM
+Outils & Méthodes
+Git / GitHub (bases)
+Notion, Trello
+Méthodes agiles (bases)
+Google Workspace
+PROJETS (FORMATION)
+Développement d’interfaces frontend en JavaScript (ES6)
+Création de composants React et gestion des états
+Gestion de formulaires et validation des données
+Exercices pratiques : tableaux, objets, fonctions, événements
+(Projets réalisés dans le cadre de la formation)
+EXPÉRIENCE PROFESSIONNELLE
+Responsable Showroom – Inova Fashion
+2014 – 2024
+Gestion opérationnelle et organisationnelle d’un espace commercial
+Coordination d’équipes et de partenaires externes
+Analyse des performances et optimisation des processus
+Travail orienté satisfaction utilisateur et amélioration continue
+Cheffe d’équipe – Posterscope
+2014 – 2015
+Coordination d’équipes multi-sites
+Supervision logistique et opérationnelle
+FORMATION
+2025 — Formation Développement Frontend (JavaScript ES6, React)
+2024 — Bilan de compétences — CHANCE
+2017 – 2019 — MBA Communication & Stratégies Commerciales — INSEEC
+2013 – 2017 — Licence LEA Anglais / Espagnol — Université de Nanterre
+LANGUES
+Français : natif
+Anglais : bilingue
+Espagnol : C1
+CENTRES D’INTÉRÊT
+Yoga — Apnée (AIDA niveau 2) — Arts
