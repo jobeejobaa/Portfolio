@@ -17,16 +17,12 @@ function Hero() {
           </li>
         ))}
       </ul>
-      <p className="hero-bio">
-      Après une première carrière axée sur la gestion de projets, la relation client et l’organisation d’événements, j’ai choisi de me reconvertir dans le développement web.
-      <br />
-      J’ai obtenu une certification Fullstack au cours de laquelle j’ai développé plusieurs applications, notamment un site e-commerce complet pour un client réel.
-      <br />
-      <span className="hero-bio-spacer" />
-      Aujourd’hui, je me spécialise en frontend avec React, avec un intérêt particulier pour la structuration du code, l’accessibilité et l’expérience utilisateur.
-      <br />
-      Mon objectif est d’intégrer une équipe structurée afin de progresser aux côtés de développeurs expérimentés et consolider mes bonnes pratiques.
-      </p>
+      <div className="hero-bio">
+        <p>Après une première carrière axée sur la gestion de projets, la relation client et l’organisation d’événements, j’ai choisi de me reconvertir dans le développement web.</p>
+        <p>J’ai obtenu une certification Fullstack au cours de laquelle j’ai développé plusieurs applications, notamment un site e-commerce complet pour un client réel.</p>
+        <p>Aujourd’hui, je me spécialise en frontend avec React, avec un intérêt particulier pour la structuration du code, l’accessibilité et l’expérience utilisateur.</p>
+        <p>Mon objectif est d’intégrer une équipe structurée afin de progresser aux côtés de développeurs expérimentés et consolider mes bonnes pratiques.</p>
+      </div>
       <div className="hero-cv">
         <a
           href="/JDW%20Dev.pdf"
