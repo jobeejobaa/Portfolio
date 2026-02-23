@@ -6,7 +6,6 @@
   --color-accent: #2d4a3e;
   --color-border: #e0ddd8;
   --font-sans: "DM Sans", system-ui, sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
   --space: 1.5rem;
   --max-width: 52rem;
 }
@@ -75,7 +74,7 @@ a:hover {
 }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
   margin: 0 0 0.25em;
@@ -85,7 +84,7 @@ a:hover {
 }
 
 .hero-name {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.1rem;
   color: var(--color-text-muted);
   margin: 0 0 0.5rem;
@@ -235,24 +234,42 @@ a:hover {
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0 0 1rem;
   color: var(--color-text);
 }
 
-.projets-intro {
-  max-width: 42ch;
-  margin: 0 0 2rem;
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  line-height: 1.6;
-}
-
 .card {
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--color-border);
+}
+
+.card-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.card:hover .card-details {
+  max-height: 1200px;
+  opacity: 1;
+}
+
+.card-image-wrap {
+  margin: -1.5rem 0 1rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--color-bg-subtle, #f0f0f0);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
 }
 
 .card:last-of-type {
