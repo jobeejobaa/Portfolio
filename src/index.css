@@ -98,12 +98,6 @@ a:hover {
   margin: 0 0 1rem;
 }
 
-.hero-intro {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  margin: 0 0 0.5rem;
-}
-
 .hero-stack {
   list-style: none;
   padding: 0;
@@ -285,6 +279,53 @@ a:hover {
 
 .card-block {
   margin-bottom: 1rem;
+}
+
+.card-arrow {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card-arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(45, 74, 62, 0.08);
+  color: var(--color-accent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  animation: card-arrow-pulse 1.4s ease-in-out infinite;
+}
+
+.card:hover .card-arrow-icon {
+  transform: translateY(3px) scale(0.95);
+  background: rgba(45, 74, 62, 0.14);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover .card-arrow {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+@keyframes card-arrow-pulse {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(2px) scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.85;
+  }
 }
 
 .card-label {

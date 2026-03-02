@@ -2,6 +2,7 @@ function Card({
   image,
   titre,
   contexte,
+  showIntroArrow,
   stackTechnique,
   fonctionnalites,
   role,
@@ -29,6 +30,27 @@ function Card({
         {contexte && (
           <div className="card-block">
             <p className="card-text">{contexte}</p>
+            {showIntroArrow && (
+              <div className="card-arrow">
+                <span className="card-arrow-icon" aria-hidden="true">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9l6 6 6-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+            )}
           </div>
         )}
       </div>

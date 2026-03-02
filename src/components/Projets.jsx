@@ -33,15 +33,24 @@ const PROJECTS = [
   {
     id: 2,
     image: '/projets/ocean-katz.png',
-    titre: 'Ocean Katz',
-    contexte: 'Site de présentation personnel. Projet pour mettre en pratique l\'intégration et le design web.',
-    stackTechnique: 'HTML – CSS – JavaScript (ou stack du projet)',
-    fonctionnalites: ['Site vitrine', 'Mise en page responsive'],
-    role: 'Conception et développement du site de présentation.',
-    difficultes: null,
+    titre: 'The Ocean Katz – site vitrine personnel',
+    contexte:
+      "Projet personnel, indépendant de ma formation. L'objectif est de créer un site vitrine autour de l’univers de la plongée/apnée pour approfondir mes compétences en intégration web et design d’interface.",
+    stackTechnique:
+      'HTML – CSS – JavaScript – Ruby on Rails – Docker',
+    fonctionnalites: [
+      'Type de projet : site vitrine / présentation personnelle',
+      'Mise en page responsive pensée pour mobile, tablette et desktop',
+      'Travail sur l’univers graphique (typographies, couleurs, visuels liés à l’océan)',
+      'Intégration d’interactions front (JavaScript) pour améliorer l’expérience utilisateur',
+      'Structure d’application Ruby on Rails avec préparation au déploiement (Docker, Vercel prévu)',
+    ],
+    role:
+      "Conception de l’interface (maquettage et choix graphiques), intégration HTML/CSS/JavaScript, mise en place de la structure Ruby on Rails et préparation du déploiement via Docker. Projet géré de A à Z en autonomie.",
+    difficultes:
+      "Le principal défi a été de trouver un bon équilibre entre une identité visuelle forte et une mise en page lisible sur tous les écrans, tout en gardant un code propre et facilement maintenable.",
     linkHref: 'https://github.com/jobeejobaa/Ocean-Katz',
     linkLabel: 'Voir sur GitHub',
-    deploiement: 'Vercel', // à déployer ; quand c’est en ligne, ajoute lienDemo: 'https://...'
     lienDemo: null, // ex. 'https://ocean-katz.vercel.app' une fois déployé
   },
 ]
@@ -61,6 +70,7 @@ function Projets() {
           image={project.image}
           titre={project.titre}
           contexte={project.contexte}
+          showIntroArrow={project.id === 1 || project.id === 2}
           stackTechnique={project.stackTechnique}
           fonctionnalites={project.fonctionnalites}
           role={project.role}

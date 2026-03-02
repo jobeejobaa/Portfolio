@@ -1,11 +1,10 @@
-const STACK = ['HTML5', 'CSS3', 'JavaScript (ES6)', 'React']
+const STACK = ['JavaScript (ES6)', 'React', 'Ruby on Rails']
 
 function Hero() {
   return (
     <section id="accueil" className="hero">
       <h1 className="hero-title">Johanna Delfieux Watts</h1>
       <p className="hero-role">Développeuse Frontend Junior</p>
-      <p className="hero-intro">Je crée des sites et applications en : </p>
       <ul className="hero-stack">
         {STACK.map((tech, index) => (
           <li
@@ -18,10 +17,18 @@ function Hero() {
         ))}
       </ul>
       <div className="hero-bio">
-        <p>Après une première carrière axée sur la gestion de projets, la relation client et l’organisation d’événements, j’ai choisi de me reconvertir dans le développement web.</p>
-        <p>J’ai obtenu une certification Fullstack au cours de laquelle j’ai développé plusieurs applications, notamment un site e-commerce complet pour un client réel.</p>
-        <p>Aujourd’hui, je me spécialise en frontend avec React, avec un intérêt particulier pour la structuration du code, l’accessibilité et l’expérience utilisateur.</p>
-        <p>Mon objectif est d’intégrer une équipe structurée afin de progresser aux côtés de développeurs expérimentés et consolider mes bonnes pratiques.</p>
+        <p>
+          Après une première carrière en gestion de projets et relation client, je me suis reconvertie dans le développement web.
+        </p>
+        <p>
+          Formée au développement Fullstack (Ruby on Rails, PostgreSQL) et aujourd’hui en frontend avec JavaScript (ES6) et React, je conçois des interfaces claires, accessibles et centrées sur l’utilisateur.
+        </p>
+        <p>
+          Je travaille aussi bien sur des projets pédagogiques que sur des projets pour des clients réels, de l’application e‑commerce à des sites vitrines.
+        </p>
+        <p>
+          Mon objectif est de rejoindre une équipe tech où je pourrai contribuer à des projets concrets tout en continuant à progresser aux côtés de développeurs expérimentés.
+        </p>
       </div>
       <div className="hero-cv">
         <a
