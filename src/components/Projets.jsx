@@ -9,6 +9,7 @@ const INTRO_CARD = {
 
 const PROJECTS = [
   {
+    
     id: 1,
     image: '/projets/ecommerce.png',
     titre: 'Application e-commerce – Projet Fullstack Rails',
