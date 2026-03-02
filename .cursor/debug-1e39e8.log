@@ -1,3 +1,0 @@
-{"sessionId":"1e39e8","hypothesisId":"A","location":"vite.config.js:configureServer","message":"Vite server config","data":{"cwd":"/Users/jobee/Desktop/Taff/Portefolio","resolvedRoot":"/Users/jobee/Desktop/Taff/Portefolio","isPortefolioRoot":true,"expectedPort":5173},"timestamp":1771840300469}
-{"sessionId":"1e39e8","hypothesisId":"B","location":"vite.config.js:listening","message":"Vite server listening","data":{"actualPort":5175,"url":"http://localhost:5175","cwd":"/Users/jobee/Desktop/Taff/Portefolio"},"timestamp":1771840300482}
-{"sessionId":"1e39e8","location":"main.jsx:entry","message":"App loaded in browser","data":{"projectId":"portfolio-johanna","title":"Portfolio | Johanna Delfieux Watts"},"timestamp":1771840301925,"hypothesisId":"C"}

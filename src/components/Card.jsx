@@ -23,7 +23,11 @@ function Card({
       <div className="card-preview">
         {image && (
           <div className="card-image-wrap">
-            <img src={image} alt={`Aperçu : ${titre}`} className="card-image" />
+            <img
+              src={image.startsWith('/') ? image.slice(1) : image}
+              alt={`Aperçu : ${titre}`}
+              className="card-image"
+            />
           </div>
         )}
         <h3 className="card-title">{titre}</h3>
