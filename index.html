@@ -10,15 +10,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <!-- #region agent log -->
-  <script>
-    (function(){
-      var scriptSrc = '/src/main.jsx';
-      var resolved = new URL(scriptSrc, location.origin).href;
-      fetch('http://127.0.0.1:7866/ingest/44fe78ed-75bd-4062-8590-ed06cffb950d',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'2727ff'},body:JSON.stringify({sessionId:'2727ff',location:'index.html:script',message:'Page load script URL resolution',data:{href:location.href,baseURI:document.baseURI,scriptSrc:scriptSrc,resolvedScriptURL:resolved},timestamp:Date.now(),hypothesisId:'H1-H2'})}).catch(function(){});
-    })();
-  </script>
-  <!-- #endregion agent log -->
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
