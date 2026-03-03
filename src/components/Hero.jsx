@@ -32,8 +32,8 @@ function Hero() {
       </div>
       <div className="hero-cv">
         <a
-          href="/JDW%20Dev.pdf"
-          download="JDW_Dev_CV.pdf"
+          href="CV_Delfieux_Watts.pdf"
+          download="CV_Delfieux_Watts.pdf"
           className="hero-cv-link"
         >
           Télécharger mon CV (PDF)
