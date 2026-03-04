@@ -1,12 +1,5 @@
 import Card from './Card'
 
-const INTRO_CARD = {
-  id: 0,
-  titre: 'À propos de ces projets',
-  contexte:
-    "Vous pourrez trouver ci-dessous la liste de mes projets. J'en ai réalisé certains lors de ma formation chez The Hacking Project, et d'autres sont des projets personnels.",
-}
-
 const PROJECTS = [
   {
     
@@ -60,11 +53,6 @@ function Projets() {
   return (
     <section id="projets" className="projets">
       <h2 className="section-title">Mes projets</h2>
-      <Card
-        key={INTRO_CARD.id}
-        titre={INTRO_CARD.titre}
-        contexte={INTRO_CARD.contexte}
-      />
       {PROJECTS.map((project) => (
         <Card
           key={project.id}
