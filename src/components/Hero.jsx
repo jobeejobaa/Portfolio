@@ -5,7 +5,8 @@ function Hero() {
     <section id="accueil" className="hero">
       <h1 className="hero-title">Johanna Delfieux Watts</h1>
       <p className="hero-role">Développeuse Frontend Junior</p>
-      <ul className="hero-stack">
+      <div className="hero-encadre">
+        <ul className="hero-stack">
         {STACK.map((tech, index) => (
           <li
             key={tech}
@@ -29,6 +30,7 @@ function Hero() {
         <p>
           Mon objectif est de rejoindre une équipe tech où je pourrai contribuer à des projets concrets tout en continuant à progresser aux côtés de développeurs expérimentés.
         </p>
+        </div>
       </div>
       <div className="hero-cv">
         <a

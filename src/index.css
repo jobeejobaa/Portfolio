@@ -1,10 +1,13 @@
-/* --- Variables --- */
+/* --- Variables (thème bleu nuit + jaune, en phase avec le CV) --- */
 :root {
-  --color-bg: #f8f6f3;
-  --color-text: #1a1a1a;
-  --color-text-muted: #5c5c5c;
-  --color-accent: #2d4a3e;
-  --color-border: #e0ddd8;
+  --color-bg: #0f1629;
+  --color-bg-soft: #151f35;
+  --color-bg-card: rgba(21, 31, 53, 0.85);
+  --color-text: #e8e6e3;
+  --color-text-muted: #9ca3b4;
+  --color-accent: #d4a84b;
+  --color-accent-soft: rgba(212, 168, 75, 0.2);
+  --color-border: rgba(212, 168, 75, 0.2);
   --font-sans: "DM Sans", system-ui, sans-serif;
   --space: 1.5rem;
   --max-width: 52rem;
@@ -29,6 +32,12 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  /* Fond texturé type papier peint : motif discret ton sur ton (points + léger grain) */
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a2744' fill-opacity='0.5'%3E%3Ccircle cx='12' cy='12' r='0.6'/%3E%3Ccircle cx='36' cy='12' r='0.6'/%3E%3Ccircle cx='12' cy='36' r='0.6'/%3E%3Ccircle cx='36' cy='36' r='0.6'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 60px 60px, 256px 256px;
+  min-height: 100vh;
 }
 
 a {
@@ -47,7 +56,8 @@ a:hover {
   z-index: 100;
   padding: var(--space) 1.5rem;
   border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-soft);
+  backdrop-filter: blur(8px);
 }
 
 .nav {
@@ -104,6 +114,16 @@ a:hover {
   margin: 0 0 1rem;
 }
 
+.hero-encadre {
+  max-width: 75ch;
+  margin: 0 auto 1.5rem;
+  padding: 1.5rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-bg-card);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
 .hero-stack {
   list-style: none;
   padding: 0;
@@ -122,10 +142,17 @@ a:hover {
 .hero-stack-item {
   opacity: 0;
   transform: translateY(12px);
-  animation: hero-stack-in 0.5s ease forwards;
+  animation-name: hero-stack-in;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 @keyframes hero-stack-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
@@ -139,8 +166,7 @@ a:hover {
 
 .hero-bio {
   text-align: left;
-  max-width: 75ch;
-  margin: 0 auto 1rem;
+  margin: 0;
   font-size: 0.95rem;
   color: var(--color-text-muted);
   line-height: 1.6;
@@ -150,7 +176,10 @@ a:hover {
   margin-bottom: 0.75em;
   opacity: 0;
   transform: translateY(14px);
-  animation: hero-bio-in 0.55s ease forwards;
+  animation-name: hero-bio-in;
+  animation-duration: 0.55s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .hero-bio p:nth-child(1) { animation-delay: 0.1s; }
@@ -163,9 +192,23 @@ a:hover {
 }
 
 @keyframes hero-bio-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Si l'utilisateur préfère réduire les animations, afficher le contenu directement */
+@media (prefers-reduced-motion: reduce) {
+  .hero-stack-item,
+  .hero-bio p {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
 
@@ -263,7 +306,7 @@ a:hover {
   margin: -1.5rem 0 1rem 0;
   border-radius: 0.5rem;
   overflow: hidden;
-  background: var(--color-bg-subtle, #f0f0f0);
+  background: var(--color-bg-soft);
 }
 
 .card-image {
@@ -302,17 +345,17 @@ a:hover {
   width: 2rem;
   height: 2rem;
   border-radius: 999px;
-  background: rgba(45, 74, 62, 0.08);
+  background: var(--color-accent-soft);
   color: var(--color-accent);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
   animation: card-arrow-pulse 1.4s ease-in-out infinite;
 }
 
 .card:hover .card-arrow-icon {
   transform: translateY(3px) scale(0.95);
-  background: rgba(45, 74, 62, 0.14);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  background: rgba(212, 168, 75, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover .card-arrow {
@@ -406,6 +449,11 @@ a:hover {
   border-top: 1px solid var(--color-border);
   text-align: center;
   scroll-margin-top: var(--header-height);
+}
+
+.legal h1,
+.legal h2 {
+  color: var(--color-text);
 }
 
 .legal h1 {
