@@ -17,7 +17,6 @@ function MentionsLegalesSection() {
       <h2>Contact</h2>
       <p>
         E-mail : <a href="mailto:johannadelfieux@gmail.com">johannadelfieux@gmail.com</a><br />
-        Téléphone : +33 6 86 69 98 36
       </p>
 
       <h2>Hébergement</h2>
