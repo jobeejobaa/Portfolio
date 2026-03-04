@@ -308,8 +308,29 @@ a:hover {
 }
 
 .card {
-  padding: 1.5rem 0;
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 1.5rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
   border-bottom: 1px solid var(--color-border);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(212, 168, 75, 0.35) 0%,
+    rgba(21, 31, 53, 0.7) 40%,
+    rgba(5, 1, 13, 0.98) 100%
+  );
+  z-index: -1;
+  opacity: 0.9;
 }
 
 .card-details {

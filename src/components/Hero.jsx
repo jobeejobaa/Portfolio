@@ -1,11 +1,19 @@
+import { useState } from 'react'
+
 const STACK = ['JavaScript (ES6)', 'React', 'Ruby on Rails']
 
 function Hero() {
+  const [animationKey, setAnimationKey] = useState(0)
+
+  const handleCvClick = () => {
+    setAnimationKey((prev) => prev + 1)
+  }
+
   return (
     <section id="accueil" className="hero">
       <h1 className="hero-title">Johanna Delfieux Watts</h1>
       <p className="hero-role">Développeuse Frontend Junior</p>
-      <div className="hero-encadre">
+      <div className="hero-encadre" key={animationKey}>
         <ul className="hero-stack">
           {STACK.map((tech, index) => (
             <li
@@ -38,6 +46,7 @@ function Hero() {
             href="CV_Delfieux_Watts.pdf"
             download="CV_Delfieux_Watts.pdf"
             className="hero-cv-link"
+            onClick={handleCvClick}
           >
             Télécharger mon CV
           </a>
