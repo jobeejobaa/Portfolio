@@ -8,6 +8,7 @@
   --font-sans: "DM Sans", system-ui, sans-serif;
   --space: 1.5rem;
   --max-width: 52rem;
+  --header-height: 5.5rem;
 }
 
 /* --- Reset & base --- */
@@ -39,10 +40,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Header --- */
+/* --- Header (sticky) --- */
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   padding: var(--space) 1.5rem;
   border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
 }
 
 .nav {
@@ -71,6 +76,7 @@ a:hover {
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
   text-align: center;
+  scroll-margin-top: var(--header-height);
 }
 
 .hero-title {
@@ -225,6 +231,7 @@ a:hover {
   padding: 2rem 1.5rem 4rem;
   border-top: 1px solid var(--color-border);
   text-align: left;
+  scroll-margin-top: var(--header-height);
 }
 
 .section-title {
@@ -391,12 +398,14 @@ a:hover {
   color: var(--color-accent);
 }
 
-/* --- Legal page --- */
+/* --- Legal (one-page section) --- */
 .legal {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem 4rem;
+  border-top: 1px solid var(--color-border);
   text-align: center;
+  scroll-margin-top: var(--header-height);
 }
 
 .legal h1 {

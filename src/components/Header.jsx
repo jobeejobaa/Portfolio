@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom'
-
 function Header() {
   return (
     <header className="header">
       <nav className="nav">
-        <Link to="/" className="nav-link">CV</Link>
-        <Link to="/mes-projets" className="nav-link">Mes projets</Link>
+        <a href="#accueil" className="nav-link">CV</a>
+        <a href="#projets" className="nav-link">Mes projets</a>
       </nav>
     </header>
   )
