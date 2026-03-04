@@ -214,6 +214,10 @@ a:hover {
 
 .hero-cv {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .hero-cv-link {
@@ -234,12 +238,26 @@ a:hover {
 }
 
 .hero-contact {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.hero-contact-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.75rem;
+}
+
+.hero-contact-social {
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-size: 0.9rem;
 }
 
 .hero-contact a,
@@ -275,6 +293,10 @@ a:hover {
   border-top: 1px solid var(--color-border);
   text-align: left;
   scroll-margin-top: var(--header-height);
+}
+
+.projets .section-title {
+  text-align: center;
 }
 
 .section-title {
@@ -493,3 +515,4 @@ a:hover {
     color: var(--color-text-muted);
   }
 }
+
