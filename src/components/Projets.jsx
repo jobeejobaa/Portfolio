@@ -22,7 +22,7 @@ const PROJECTS = [
       "La principale difficulté a été la sécurisation et la gestion des droits d'accès au panel administrateur. J'ai travaillé sur la structuration des rôles et la protection des routes afin d'assurer l'intégrité des données.",
     linkHref: 'https://github.com/THP-Lab/template-marketplace',
     linkLabel: 'Voir sur GitHub',
-    lienDemo: 'http://q8o4swwo4okswk88c00osg08.157.180.49.91.sslip.io',
+    lienDemo: 'https://haubergeriedepontius.com/',
   },
   {
     id: 2,
