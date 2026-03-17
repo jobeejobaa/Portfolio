@@ -327,8 +327,7 @@ a:hover {
 }
 
 .card-image-wrap {
-  position: relative;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.5rem 0 0 0;
   border-radius: 0.5rem;
   overflow: hidden;
   background: var(--color-bg-soft);
@@ -341,63 +340,31 @@ a:hover {
   vertical-align: middle;
 }
 
-.card-details {
-  position: absolute;
-  inset: 0;
-  padding: 1rem 1.25rem;
-  background: linear-gradient(
-    to bottom,
-    rgba(5, 7, 17, 0.85),
-    rgba(5, 7, 17, 0.96)
-  );
-  overflow-y: auto;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
+/* --- Détails dépliables (sous l'image) --- */
+
+/* Trick CSS grid : permet une animation smooth sans connaître la hauteur */
+.card-details-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
 }
 
-/* Affichage au hover (desktop) — survol de la carte entière */
+/* Ouverture au hover (desktop uniquement) */
 @media (hover: hover) {
-  .card:hover .card-details {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+  .card:hover .card-details-wrap {
+    grid-template-rows: 1fr;
   }
 }
 
-/* Affichage au clic/tap (mobile et desktop) via classe JS */
-.card-details--visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+/* Ouverture au tap (mobile) via classe JS */
+.card-details-wrap--open {
+  grid-template-rows: 1fr;
 }
 
-/* Bouton fermer l'overlay */
-.card-details-close {
-  position: sticky;
-  top: 0.5rem;
-  float: right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  padding: 0;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  background: rgba(15, 22, 41, 0.85);
-  color: var(--color-text-muted);
-  font-size: 0.75rem;
-  cursor: pointer;
-  line-height: 1;
-  transition: color 0.2s, background 0.2s;
-  z-index: 10;
-}
-
-.card-details-close:hover {
-  color: var(--color-text);
-  background: rgba(212, 168, 75, 0.15);
+/* Enfant direct : overflow hidden pour que le clip fonctionne */
+.card-details-inner {
+  overflow: hidden;
+  padding-top: 1rem;
 }
 
 .card:last-of-type {
@@ -436,16 +403,16 @@ a:hover {
   animation: card-arrow-pulse 1.4s ease-in-out infinite;
 }
 
-.card:hover .card-arrow-icon,
-.card-image-wrap--open ~ * .card-arrow-icon {
-  transform: translateY(3px) scale(0.95);
+.card:hover .card-arrow-icon {
   background: rgba(212, 168, 75, 0.3);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  animation: none;
 }
 
-.card:hover .card-arrow {
-  opacity: 0;
-  transform: translateY(4px);
+/* Flèche pointant vers le haut quand les détails sont ouverts (mobile) */
+.card-arrow-icon--up {
+  transform: rotate(180deg);
+  animation: none !important;
 }
 
 @keyframes card-arrow-pulse {
@@ -477,6 +444,11 @@ a:hover {
   color: var(--color-text-muted);
   margin: 0;
   line-height: 1.6;
+}
+
+.card-contexte {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .card-list {
