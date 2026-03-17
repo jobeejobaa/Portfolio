@@ -357,9 +357,9 @@ a:hover {
   pointer-events: none;
 }
 
-/* Affichage au hover (desktop) */
+/* Affichage au hover (desktop) — survol de la carte entière */
 @media (hover: hover) {
-  .card-image-wrap:hover .card-details {
+  .card:hover .card-details {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
