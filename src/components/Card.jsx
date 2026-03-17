@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 function Card({
   image,
@@ -16,16 +16,39 @@ function Card({
 }) {
   const [detailsVisible, setDetailsVisible] = useState(false)
 
+  // Détecte si le toucher a bougé (scroll) ou non (tap)
+  const touchStartY = useRef(null)
+  const didScroll = useRef(false)
+
   const isExternal = linkHref?.startsWith('http')
   const features = Array.isArray(fonctionnalites) ? fonctionnalites : (fonctionnalites ? [fonctionnalites] : [])
 
   const hasDetails =
     stackTechnique || features.length > 0 || role || difficultes || linkHref || lienDemo || deploiement
 
-  const toggleDetails = (e) => {
-    // Empêche le toggle si l'utilisateur clique sur un lien dans l'overlay
+  const handleTouchStart = (e) => {
+    touchStartY.current = e.touches[0].clientY
+    didScroll.current = false
+  }
+
+  const handleTouchMove = (e) => {
+    if (touchStartY.current !== null) {
+      const deltaY = Math.abs(e.touches[0].clientY - touchStartY.current)
+      if (deltaY > 8) didScroll.current = true
+    }
+  }
+
+  // Ouvre l'overlay uniquement au clic/tap (pas au scroll)
+  const handleOpen = (e) => {
     if (e.target.tagName === 'A') return
-    setDetailsVisible((prev) => !prev)
+    if (didScroll.current) return
+    if (!detailsVisible) setDetailsVisible(true)
+  }
+
+  // Ferme l'overlay via le bouton ✕
+  const handleClose = (e) => {
+    e.stopPropagation()
+    setDetailsVisible(false)
   }
 
   return (
@@ -62,11 +85,13 @@ function Card({
         {image && (
           <div
             className={`card-image-wrap${detailsVisible ? ' card-image-wrap--open' : ''}`}
-            onClick={hasDetails ? toggleDetails : undefined}
+            onClick={hasDetails ? handleOpen : undefined}
+            onTouchStart={hasDetails ? handleTouchStart : undefined}
+            onTouchMove={hasDetails ? handleTouchMove : undefined}
             role={hasDetails ? 'button' : undefined}
             aria-expanded={hasDetails ? detailsVisible : undefined}
-            aria-label={hasDetails ? `${detailsVisible ? 'Masquer' : 'Afficher'} les détails de ${titre}` : undefined}
-            style={hasDetails ? { cursor: 'pointer' } : undefined}
+            aria-label={hasDetails && !detailsVisible ? `Afficher les détails de ${titre}` : undefined}
+            style={hasDetails && !detailsVisible ? { cursor: 'pointer' } : undefined}
           >
             <img
               src={image}
@@ -76,6 +101,15 @@ function Card({
 
             {hasDetails && (
               <div className={`card-details${detailsVisible ? ' card-details--visible' : ''}`}>
+                {/* Bouton fermer — visible sur mobile et desktop */}
+                <button
+                  className="card-details-close"
+                  onClick={handleClose}
+                  aria-label="Fermer les détails"
+                >
+                  ✕
+                </button>
+
                 {stackTechnique && (
                   <div className="card-block">
                     <p className="card-label">Stack</p>
