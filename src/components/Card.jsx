@@ -58,7 +58,11 @@ function Card({
 
       {image && (
         <div className="card-image-wrap">
-          <img src={image} alt={`Aperçu : ${titre}`} className="card-image" />
+          <img
+              src={`${import.meta.env.BASE_URL}${image.replace(/^\//, '')}`}
+              alt={`Aperçu : ${titre}`}
+              className="card-image"
+            />
         </div>
       )}
 
