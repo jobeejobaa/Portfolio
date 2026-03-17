@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 function Card({
   image,
   titre,
@@ -12,11 +14,19 @@ function Card({
   deploiement,
   lienDemo,
 }) {
+  const [detailsVisible, setDetailsVisible] = useState(false)
+
   const isExternal = linkHref?.startsWith('http')
   const features = Array.isArray(fonctionnalites) ? fonctionnalites : (fonctionnalites ? [fonctionnalites] : [])
 
   const hasDetails =
     stackTechnique || features.length > 0 || role || difficultes || linkHref || lienDemo || deploiement
+
+  const toggleDetails = (e) => {
+    // Empêche le toggle si l'utilisateur clique sur un lien dans l'overlay
+    if (e.target.tagName === 'A') return
+    setDetailsVisible((prev) => !prev)
+  }
 
   return (
     <article className="card">
@@ -25,7 +35,7 @@ function Card({
         {contexte && (
           <div className="card-block">
             <p className="card-text">{contexte}</p>
-            {showIntroArrow && (
+            {showIntroArrow && !detailsVisible && (
               <div className="card-arrow">
                 <span className="card-arrow-icon" aria-hidden="true">
                   <svg
@@ -50,23 +60,32 @@ function Card({
         )}
 
         {image && (
-          <div className="card-image-wrap">
+          <div
+            className={`card-image-wrap${detailsVisible ? ' card-image-wrap--open' : ''}`}
+            onClick={hasDetails ? toggleDetails : undefined}
+            role={hasDetails ? 'button' : undefined}
+            aria-expanded={hasDetails ? detailsVisible : undefined}
+            aria-label={hasDetails ? `${detailsVisible ? 'Masquer' : 'Afficher'} les détails de ${titre}` : undefined}
+            style={hasDetails ? { cursor: 'pointer' } : undefined}
+          >
             <img
-              src={image.startsWith('/') ? image.slice(1) : image}
+              src={image}
               alt={`Aperçu : ${titre}`}
               className="card-image"
             />
 
             {hasDetails && (
-              <div className="card-details">
+              <div className={`card-details${detailsVisible ? ' card-details--visible' : ''}`}>
                 {stackTechnique && (
                   <div className="card-block">
+                    <p className="card-label">Stack</p>
                     <p className="card-text">{stackTechnique}</p>
                   </div>
                 )}
 
                 {features.length > 0 && (
                   <div className="card-block">
+                    <p className="card-label">Fonctionnalités</p>
                     <ul className="card-list">
                       {features.map((item, i) => (
                         <li key={i}>{item}</li>
@@ -77,12 +96,14 @@ function Card({
 
                 {role && (
                   <div className="card-block">
+                    <p className="card-label">Mon rôle</p>
                     <p className="card-text">{role}</p>
                   </div>
                 )}
 
                 {difficultes && (
                   <div className="card-block">
+                    <p className="card-label">Difficultés</p>
                     <p className="card-text">{difficultes}</p>
                   </div>
                 )}
