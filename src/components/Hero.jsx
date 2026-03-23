@@ -10,13 +10,21 @@ function Hero() {
       <div className="hero-bio">
         <p>
           Curieuse et passionnée par les langages, j'ai d'abord étudié la linguistique.
-          En découvrant la programmation, j'ai eu l'impression d'apprendre un nouveau langage structuré —
-          avec ses règles, sa logique, et la capacité de créer des interfaces et des expériences numériques.
+          En découvrant la programmation, j'ai eu l'impression d'apprendre un nouveau langage structuré,
+          avec ses règles et sa logique, qui permet non seulement de communiquer mais aussi de créer
+          des interfaces et des expériences numériques.
         </p>
         <p>
-          Formée au Fullstack (Ruby on Rails, PostgreSQL) et spécialisée en JavaScript ES6 &amp; React,
-          je conçois des interfaces claires, accessibles et centrées sur l'utilisateur.
-          Mon objectif : rejoindre une équipe tech pour progresser et contribuer à des projets concrets.
+          Après une première carrière en gestion de projets et relation client, je me suis reconvertie
+          dans le développement web. Formée au développement Fullstack (Ruby on Rails, PostgreSQL) et
+          aujourd'hui en frontend avec JavaScript (ES6) et React, je conçois des interfaces claires,
+          accessibles et centrées sur l'utilisateur.
+        </p>
+        <p>
+          Je travaille aussi bien sur des projets personnels que pour des clients réels, de l'application
+          e-commerce de cotes de maille à des sites vitrines. Mon objectif est de rejoindre une équipe
+          tech pour progresser aux côtés de développeurs plus expérimentés et contribuer à des projets
+          tout en continuant à grandir.
         </p>
       </div>
 
