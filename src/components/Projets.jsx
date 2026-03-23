@@ -47,6 +47,28 @@ const PROJECTS = [
     linkLabel: 'Voir sur GitHub',
     lienDemo: null, // ex. 'https://ocean-katz.vercel.app' une fois déployé
   },
+  {
+    id: 3,
+    image: '/projets/apnea-flow.png',
+    titre: "Apnea Flow – Plateforme fullstack de gestion de cours d'apnée",
+    contexte:
+      "Projet fullstack développé de A à Z en autonomie. Apnea Flow met en relation des instructeurs certifiés et des élèves souhaitant progresser en apnée, avec deux rôles utilisateurs distincts, une API REST complète et une interface moderne déployée sur Railway.",
+    stackTechnique: 'React – Vite – Tailwind CSS – Node.js – Express – Prisma – PostgreSQL – JWT',
+    fonctionnalites: [
+      'Authentification sécurisée JWT (deux rôles : élève / instructeur)',
+      'Réservation de cours avec calendrier interactif',
+      'Demandes de cours privés avec notifications en temps réel (polling 30s)',
+      'Interface bilingue Français / Anglais avec toggle instantané',
+      'Upload de photo de profil, design glassmorphism responsive',
+    ],
+    role:
+      "Conception et développement complet : modélisation BDD (Prisma/PostgreSQL), API REST (Node.js/Express), frontend React avec Context API, déploiement sur Railway.",
+    difficultes:
+      "Gérer deux rôles utilisateurs avec vues et permissions différentes, et implémenter le polling temps réel pour les notifications instructeurs.",
+    linkHref: 'https://github.com/jobeejobaa/ApneaFlow1',
+    linkLabel: 'Voir sur GitHub',
+    lienDemo: 'https://apneaflow1-production.up.railway.app',
+  },
 ]
 
 function Projets() {
@@ -59,7 +81,7 @@ function Projets() {
           image={project.image}
           titre={project.titre}
           contexte={project.contexte}
-          showIntroArrow={project.id === 1 || project.id === 2}
+          showIntroArrow={true}
           stackTechnique={project.stackTechnique}
           fonctionnalites={project.fonctionnalites}
           role={project.role}
