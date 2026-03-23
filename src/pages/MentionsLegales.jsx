@@ -20,17 +20,17 @@ function MentionsLegales() {
 
       <h2>Hébergement</h2>
       <p>
-        Ce site est un portfolio personnel. En cas d’hébergement par un tiers, les informations d’hébergement seront indiquées ici.
+        Ce site est un portfolio personnel. En cas d'hébergement par un tiers, les informations d'hébergement seront indiquées ici.
       </p>
 
       <h2>Propriété intellectuelle</h2>
       <p>
-        L’ensemble du contenu de ce site (textes, mise en page, structure) est protégé par le droit d’auteur. Toute reproduction non autorisée est interdite.
+        L'ensemble du contenu de ce site (textes, mise en page, structure) est protégé par le droit d'auteur. Toute reproduction non autorisée est interdite.
       </p>
 
       <h2>Données personnelles</h2>
       <p>
-        Aucune donnée personnelle n’est collectée via ce site à l’exception des informations que vous choisissez d’envoyer par e-mail ou via un formulaire de contact.
+        Aucune donnée personnelle n'est collectée via ce site à l'exception des informations que vous choisissez d'envoyer par e-mail ou via un formulaire de contact.
       </p>
     </div>
   )
