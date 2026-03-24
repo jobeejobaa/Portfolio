@@ -26,29 +26,6 @@ const PROJECTS = [
   },
   {
     id: 2,
-    image: "/projets/ocean-katz.png",
-    titre: "The Ocean Katz - site vitrine personnel",
-    contexte:
-      "Projet personnel, indépendant de ma formation. L'objectif est de créer un site vitrine autour de l'univers de la plongée/apnée pour approfondir mes compétences en intégration web et design d'interface.",
-    stackTechnique: "HTML - CSS - JavaScript - Ruby on Rails - Docker",
-    fonctionnalites: [
-      "Type de projet : site vitrine / présentation personnelle",
-      "Mise en page responsive pensée pour mobile, tablette et desktop",
-      "Travail sur l'univers graphique (typographies, couleurs, visuels liés à l'océan)",
-      "Intégration d'interactions front (JavaScript) pour améliorer l'expérience utilisateur",
-      "Structure d'application Ruby on Rails avec préparation au déploiement (Docker, Vercel prévu)",
-    ],
-    role: "Conception de l'interface (maquettage et choix graphiques), intégration HTML/CSS/JavaScript, mise en place de la structure Ruby on Rails et préparation du déploiement via Docker. Projet géré de A à Z en autonomie.",
-    difficultes:
-      "Le principal défi a été de trouver un bon équilibre entre une identité visuelle forte et une mise en page lisible sur tous les écrans, tout en gardant un code propre et facilement maintenable.",
-    linkHref: "https://github.com/jobeejobaa/Ocean-Katz",
-    linkLabel: "Voir sur GitHub",
-    lienDemo: null,
-    couleur: "jaune",
-    tags: ["Responsive", "Design custom", "Docker"],
-  },
-  {
-    id: 3,
     image: "/projets/apnea-flow.png",
     titre: "Apnea Flow - Plateforme fullstack de gestion de cours d'apnée",
     contexte:
@@ -70,6 +47,29 @@ const PROJECTS = [
     lienDemo: "https://apneaflow1-production.up.railway.app",
     couleur: "menthe",
     tags: ["Auth JWT", "Polling temps réel", "Railway"],
+  },
+  {
+    id: 3,
+    image: "/projets/ocean-katz.png",
+    titre: "The Ocean Katz - site vitrine personnel",
+    contexte:
+      "Projet personnel, indépendant de ma formation. L'objectif est de créer un site vitrine autour de l'univers de la plongée/apnée pour approfondir mes compétences en intégration web et design d'interface.",
+    stackTechnique: "HTML - CSS - JavaScript - Ruby on Rails - Docker",
+    fonctionnalites: [
+      "Type de projet : site vitrine / présentation personnelle",
+      "Mise en page responsive pensée pour mobile, tablette et desktop",
+      "Travail sur l'univers graphique (typographies, couleurs, visuels liés à l'océan)",
+      "Intégration d'interactions front (JavaScript) pour améliorer l'expérience utilisateur",
+      "Structure d'application Ruby on Rails avec préparation au déploiement (Docker, Vercel prévu)",
+    ],
+    role: "Conception de l'interface (maquettage et choix graphiques), intégration HTML/CSS/JavaScript, mise en place de la structure Ruby on Rails et préparation du déploiement via Docker. Projet géré de A à Z en autonomie.",
+    difficultes:
+      "Le principal défi a été de trouver un bon équilibre entre une identité visuelle forte et une mise en page lisible sur tous les écrans, tout en gardant un code propre et facilement maintenable.",
+    linkHref: "https://github.com/jobeejobaa/Ocean-Katz",
+    linkLabel: "Voir sur GitHub",
+    lienDemo: null,
+    couleur: "jaune",
+    tags: ["Responsive", "Design custom", "Docker"],
   },
 ]
 
