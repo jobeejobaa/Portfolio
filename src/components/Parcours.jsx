@@ -1,41 +1,23 @@
-const ETAPES = [
-  {
-    id: 1,
-    emoji: '🗣️',
-    titre: 'Linguiste',
-    sous: 'LEA Anglais / Espagnol',
-    couleur: 'menthe',
-  },
-  {
-    id: 2,
-    emoji: '🤝',
-    titre: 'Commerciale',
-    sous: '10 ans — Relation client',
-    couleur: 'corail',
-  },
-  {
-    id: 3,
-    emoji: '💻',
-    titre: 'Développeuse',
-    sous: 'Fullstack — 2025/2026',
-    couleur: 'jaune',
-  },
-]
+import { useLanguage } from "../contexts/LanguageContext"
+
+const EMOJIS = ["🗣️", "🤝", "💻"]
+const COULEURS = ["menthe", "corail", "jaune"]
 
 function Parcours() {
+  const { t } = useLanguage()
+  const etapes = t("parcours.etapes")
+
   return (
     <section id="parcours" className="parcours">
-      <h2 className="section-title">Mon parcours</h2>
-      <p className="parcours-sous-titre">
-        Trois étapes, une logique : comprendre, créer, connecter
-      </p>
+      <h2 className="section-title">{t("parcours.title")}</h2>
+      <p className="parcours-sous-titre">{t("parcours.subtitle")}</p>
 
       <div className="parcours-timeline">
         <div className="parcours-ligne" aria-hidden="true" />
-        {ETAPES.map((etape) => (
-          <div key={etape.id} className="parcours-etape">
-            <div className={`parcours-icone parcours-icone--${etape.couleur}`}>
-              <span aria-hidden="true">{etape.emoji}</span>
+        {etapes.map((etape, i) => (
+          <div key={i} className="parcours-etape">
+            <div className={`parcours-icone parcours-icone--${COULEURS[i]}`}>
+              <span aria-hidden="true">{EMOJIS[i]}</span>
             </div>
             <strong className="parcours-titre">{etape.titre}</strong>
             <span className="parcours-sous">{etape.sous}</span>
@@ -43,9 +25,7 @@ function Parcours() {
         ))}
       </div>
 
-      <p className="parcours-citation">
-        "Coder, c'est apprendre un nouveau langage — et ça, c'est mon terrain."
-      </p>
+      <p className="parcours-citation">"{t("parcours.citation")}"</p>
     </section>
   )
 }

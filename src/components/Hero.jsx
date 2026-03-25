@@ -1,31 +1,20 @@
-const STACK = ['JavaScript (ES6)', 'React', 'Ruby on Rails', 'Node.js', 'PostgreSQL']
+import { useLanguage } from "../contexts/LanguageContext"
+
+const STACK = ["JavaScript (ES6)", "React", "Ruby on Rails", "Node.js", "PostgreSQL"]
 
 function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section id="accueil" className="hero">
       <h1 className="hero-title">Johanna<br />Delfieux Watts</h1>
-      <p className="hero-role">Développeuse Fullstack Junior</p>
-      <span className="hero-tagline">Linguiste devenue développeuse — je traduis vos besoins en code</span>
+      <p className="hero-role">{t("hero.role")}</p>
+      <span className="hero-tagline">{t("hero.tagline")}</span>
 
       <div className="hero-bio">
-        <p>
-          Curieuse et passionnée par les langages, j'ai d'abord étudié la linguistique.
-          En découvrant la programmation, j'ai eu l'impression d'apprendre un nouveau langage structuré,
-          avec ses règles et sa logique, qui permet non seulement de communiquer mais aussi de créer
-          des interfaces et des expériences numériques.
-        </p>
-        <p>
-          Après une première carrière en gestion de projets et relation client, je me suis reconvertie
-          dans le développement web. Formée au développement Fullstack (Ruby on Rails, PostgreSQL) et
-          aujourd'hui en frontend avec JavaScript (ES6) et React, je conçois des interfaces claires,
-          accessibles et centrées sur l'utilisateur.
-        </p>
-        <p>
-          Je travaille aussi bien sur des projets personnels que pour des clients réels, de l'application
-          e-commerce de cotes de maille à des sites vitrines. Mon objectif est de rejoindre une équipe
-          tech pour progresser aux côtés de développeurs plus expérimentés et contribuer à des projets
-          tout en continuant à grandir.
-        </p>
+        <p>{t("hero.bio1")}</p>
+        <p>{t("hero.bio2")}</p>
+        <p>{t("hero.bio3")}</p>
       </div>
 
       <ul className="hero-stack">
@@ -40,13 +29,13 @@ function Hero() {
           download="CV_Delfieux_Watts.pdf"
           className="hero-cv-link btn-primary"
         >
-          Télécharger mon CV
+          {t("hero.btnCv")}
         </a>
         <a
           href="mailto:johannadelfieux@gmail.com"
           className="hero-cv-link hero-email-link"
         >
-          M'écrire un mail
+          {t("hero.btnEmail")}
         </a>
         <div className="hero-contact-social">
           <a href="https://linkedin.com/in/jdelfieux" target="_blank" rel="noopener noreferrer" className="hero-contact-icon" aria-label="LinkedIn">

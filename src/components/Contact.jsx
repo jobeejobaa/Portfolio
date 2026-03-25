@@ -1,10 +1,12 @@
+import { useLanguage } from "../contexts/LanguageContext"
+
 function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section id="contact" className="contact">
-      <h2 className="section-title">On travaille ensemble ?</h2>
-      <p className="contact-intro">
-        Je suis disponible pour un poste Junior Fullstack ou Frontend — n'hésite pas à me contacter !
-      </p>
+      <h2 className="section-title">{t("contact.title")}</h2>
+      <p className="contact-intro">{t("contact.intro")}</p>
       <div className="contact-buttons">
         <a href="mailto:johannadelfieux@gmail.com" className="btn-contact btn-email">
           ✉ johannadelfieux@gmail.com
