@@ -87,7 +87,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 auto; /* pousse les liens vers la droite */
   padding: 0;
 }
 .nav-links a {
@@ -104,7 +104,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   gap: 0.25rem;
   align-items: center;
-  margin-left: auto;
+  margin-left: 1.5rem; /* espace fixe entre les liens et les drapeaux */
 }
 .lang-btn {
   background: none;
