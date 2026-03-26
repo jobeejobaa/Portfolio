@@ -34,7 +34,7 @@ const translations = {
     },
     contact: {
       title: "On travaille ensemble ?",
-      intro: "Je suis disponible pour un poste Junior Fullstack ou Frontend — n'hésite pas à me contacter !",
+      intro: "Je suis disponible pour un poste Fullstack ou Frontend — n'hésite pas à me contacter !",
     },
     footer: {
       copy: "© 2025 Johanna Delfieux Watts · Fait avec React & beaucoup de café ☕",
@@ -76,7 +76,7 @@ const translations = {
     },
     contact: {
       title: "Shall we work together?",
-      intro: "I am available for a Junior Fullstack or Frontend position — feel free to reach out!",
+      intro: "I am available for a Fullstack or Frontend position — feel free to reach out!",
     },
     footer: {
       copy: "© 2025 Johanna Delfieux Watts · Built with React & lots of coffee ☕",
@@ -118,7 +118,7 @@ const translations = {
     },
     contact: {
       title: "¿Trabajamos juntos?",
-      intro: "Estoy disponible para un puesto Junior Fullstack o Frontend — ¡no dudes en contactarme!",
+      intro: "Estoy disponible para un puesto Fullstack o Frontend — ¡no dudes en contactarme!",
     },
     footer: {
       copy: "© 2025 Johanna Delfieux Watts · Hecho con React & mucho café ☕",
