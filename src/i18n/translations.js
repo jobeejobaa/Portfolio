@@ -10,7 +10,7 @@ const translations = {
       tagline: "Linguiste devenue développeuse — je traduis vos besoins en code",
       bio1: "Curieuse et passionnée par les langages, j'ai d'abord étudié la linguistique. En découvrant la programmation, j'ai eu l'impression d'apprendre un nouveau langage structuré, avec ses règles et sa logique, qui permet non seulement de communiquer mais aussi de créer des interfaces et des expériences numériques.",
       bio2: "Après une première carrière en gestion de projets et relation client, je me suis reconvertie dans le développement web. Formée au développement Fullstack (Ruby on Rails, PostgreSQL) et aujourd'hui en frontend avec JavaScript (ES6) et React, je conçois des interfaces claires, accessibles et centrées sur l'utilisateur.",
-      bio3: "Je travaille aussi bien sur des projets personnels que pour des clients réels, de l'application e-commerce de cotes de maille à des sites vitrines. Mon objectif est de rejoindre une équipe tech pour progresser aux côtés de développeurs plus expérimentés et contribuer à des projets tout en continuant à grandir.",
+      bio3: "Je travaille sur des projets personnels ainsi que sur des projets réalisés pour des clients, allant d’une application e-commerce de cottes de mailles à des sites vitrines. Mon objectif est de rejoindre une équipe tech pour progresser aux côtés de développeurs plus expérimentés et contribuer à des projets tout en continuant à grandir.",
       btnCv: "Télécharger mon CV",
       btnEmail: "M'écrire un mail",
     },

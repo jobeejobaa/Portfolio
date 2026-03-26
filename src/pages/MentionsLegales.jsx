@@ -9,7 +9,7 @@ function MentionsLegales() {
       <h2>Éditeur du site</h2>
       <p>
         Johanna Delfieux Watts<br />
-        Développeuse Frontend Junior<br />
+        Développeuse Frontend<br />
         Paris, France
       </p>
 
