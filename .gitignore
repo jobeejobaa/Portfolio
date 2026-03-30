@@ -1,0 +1,25 @@
+# Dépendances
+node_modules/
+
+# Build
+dist/
+
+# Cache Vite
+.vite/
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
