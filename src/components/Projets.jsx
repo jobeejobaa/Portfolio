@@ -4,25 +4,26 @@ const PROJECTS = [
   {
     id: 1,
     image: "/projets/ecommerce.png",
-    titre: "Application e-commerce - Projet Fullstack Rails",
+    titre: "L'Haubergerie de Pontius - E-commerce Fullstack Rails",
     contexte:
       "Projet réalisé dans le cadre de ma certification Fullstack pour un client réel. L'objectif était de concevoir une application e-commerce fonctionnelle avec gestion dynamique des produits et administration sécurisée.",
-    stackTechnique: "Ruby on Rails - PostgreSQL - Bootstrap - MVC - Git",
+    stackTechnique: "Ruby on Rails - PostgreSQL - Devise - Stripe - Bootstrap - MVC - Git",
     fonctionnalites: [
       "Catalogue produits dynamique",
+      "Paiement en ligne sécurisé via Stripe Checkout",
       "Système de gestion via un panel administrateur sécurisé",
-      "Modification des contenus sans intervention technique",
+      "Back-office CRUD permettant au client une autonomie totale sur le catalogue",
       "Structure MVC complète",
       "Intégration responsive avec Bootstrap",
     ],
     role: "Développement complet de l'application en Ruby on Rails, incluant : Conception de la structure backend, mise en place du panel administrateur sécurisé, intégration front avec Bootstrap, gestion des modèles et relations en base de données, adaptation aux besoins du client.",
     difficultes:
-      "La principale difficulté a été la sécurisation et la gestion des droits d'accès au panel administrateur. J'ai travaillé sur la structuration des rôles et la protection des routes afin d'assurer l'intégrité des données.",
-    linkHref: "https://github.com/THP-Lab/template-marketplace",
+      "Sécurisation du panel administrateur via Devise : mise en place de l'authentification, gestion des rôles utilisateur/admin et protection des routes côté contrôleur (before_action) pour garantir l'intégrité des données et bloquer tout accès non autorisé.",
+    linkHref: "https://github.com/jobeejobaa/template-marketplace",
     linkLabel: "Voir sur GitHub",
     lienDemo: "https://haubergeriedepontius.com/",
     couleur: "corail",
-    tags: ["MVC", "Admin sécurisé", "Client réel"],
+    tags: ["MVC", "Stripe", "Admin sécurisé", "Client réel"],
   },
   {
     id: 2,
