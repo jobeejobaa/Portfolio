@@ -30,9 +30,9 @@ const PROJECTS = [
     image: "/projets/apnea-flow.png",
     titre: "Apnea Flow - Plateforme fullstack de gestion de cours d'apnée",
     contexte:
-      "Projet fullstack développé de A à Z en autonomie. Apnea Flow met en relation des instructeurs certifiés et des élèves souhaitant progresser en apnée, avec deux rôles utilisateurs distincts, une API REST complète et une interface moderne déployée sur Vercel.",
+      "Projet fullstack développé de A à Z en autonomie. Apnea Flow met en relation des instructeurs certifiés et des élèves souhaitant progresser en apnée, avec deux rôles utilisateurs distincts, une API REST complète, un frontend déployé sur Vercel et un backend hébergé sur Railway.",
     stackTechnique:
-      "React - Vite - Tailwind CSS - Node.js - Express - Prisma - PostgreSQL - JWT",
+      "React - Vite - Tailwind CSS - Node.js - Express - Prisma - PostgreSQL - JWT - Vercel - Railway",
     fonctionnalites: [
       "Authentification sécurisée JWT (deux rôles : élève / instructeur)",
       "Réservation de cours avec calendrier interactif",
@@ -40,14 +40,14 @@ const PROJECTS = [
       "Interface bilingue Français / Anglais avec toggle instantané",
       "Upload de photo de profil, design glassmorphism responsive",
     ],
-    role: "Conception et développement complet : modélisation BDD (Prisma/PostgreSQL), API REST (Node.js/Express), frontend React avec Context API, déploiement sur Vercel.",
+    role: "Conception et développement complet : modélisation BDD (Prisma/PostgreSQL), API REST (Node.js/Express), frontend React avec Context API, déploiement frontend sur Vercel et backend sur Railway.",
     difficultes:
       "Gérer deux rôles utilisateurs avec vues et permissions différentes, et implémenter le polling temps réel pour les notifications instructeurs.",
     linkHref: "https://github.com/jobeejobaa/ApneaFlow1",
     linkLabel: "Voir sur GitHub",
     lienDemo: "https://apnea-flow1.vercel.app",
     couleur: "menthe",
-    tags: ["Auth JWT", "Polling temps réel", "Vercel"],
+    tags: ["Auth JWT", "Polling temps réel", "Vercel + Railway"],
   },
   {
     id: 3,
