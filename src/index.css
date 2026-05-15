@@ -240,6 +240,9 @@ section {
   margin-top: 1rem;
   margin-bottom: 2rem;
   line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word; 
+  hyphens: auto;
 }
 .hero-bio p { margin-bottom: 0.6em; }
 .hero-bio p:last-child { margin-bottom: 0; }
