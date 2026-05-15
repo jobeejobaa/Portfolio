@@ -41,75 +41,35 @@ a { color: var(--corail); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ===================================
-   BLOBS (formes organiques arrière-plan)
+   BACKGROUND VAGUES (turquoise + corail)
    =================================== */
-.blob {
+.bg-decoration {
   position: fixed;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.45;
+  inset: 0;
   z-index: -1;
   pointer-events: none;
-  will-change: transform;
+  overflow: hidden;
 }
-.blob-1 {
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, #FF6B6B 0%, #FF8E53 100%); /* corail */
-  top: -10%; right: -5%;
-  animation: float 20s ease-in-out infinite;
-}
-.blob-2 {
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, #4ECDC4 0%, #44A08D 100%); /* turquoise */
-  bottom: -10%; left: -5%;
-  animation: float 25s ease-in-out infinite reverse;
-}
-.blob-3 {
-  width: 560px; height: 560px;
-  background: radial-gradient(circle, #FFB800 0%, #FF8E53 100%); /* jaune-corail */
-  top: 40%; left: -10%;
-  opacity: 0.32;
-  animation: float 30s ease-in-out infinite;
-}
-.blob-4 {
-  width: 540px; height: 540px;
-  background: radial-gradient(circle, #4ECDC4 0%, #6C5CE7 100%); /* menthe-lavande */
-  top: 30%; right: -8%;
-  opacity: 0.32;
-  animation: float 28s ease-in-out infinite reverse;
+.bg-decoration svg {
+  width: 160%;
+  height: 160%;
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  display: block;
+  filter: blur(35px);
+  transform: rotate(-22deg);
+  transform-origin: center;
 }
 
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, -30px) scale(1.1); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .blob { animation: none !important; }
-}
-
-/* Blobs adaptés au mobile : plus petits, mieux distribués, plus présents */
 @media (max-width: 768px) {
-  .blob { filter: blur(70px); }
-  .blob-1 {
-    width: 380px; height: 380px;
-    top: -8%; right: -20%;
-    opacity: 0.5;
-  }
-  .blob-2 {
-    width: 380px; height: 380px;
-    bottom: -8%; left: -20%;
-    opacity: 0.5;
-  }
-  .blob-3 {
-    width: 340px; height: 340px;
-    top: 30%; left: -25%;
-    opacity: 0.45;
-  }
-  .blob-4 {
-    width: 340px; height: 340px;
-    top: 55%; right: -25%;
-    opacity: 0.45;
+  .bg-decoration svg {
+    filter: blur(24px);
+    transform: rotate(-28deg);
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
   }
 }
 
