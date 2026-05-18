@@ -7,14 +7,14 @@
 :root {
   --vanille: #F8F4E8;
   --jaune-soleil: #3F51B5;
-  --corail: #C33764;
+  --corail: #F85032;
   --menthe: #4ECDC4;
   --bleu-nuit: #1A1A2E;
   --texte: #2D2D2D;
   --gris-bleu: #4A5568;
   --gris-clair: #E8E4E0;
   --jaune-pale: #E8EAF6;
-  --corail-pale: #FFD4D4;
+  --corail-pale: #FDDFD7;
   --menthe-pale: #D4F4F2;
   --lavande: #E8E0F0;
 
@@ -583,7 +583,7 @@ section {
 .parcours-citation {
   font-style: italic;
   font-size: 1.05rem;
-  color: var(--corail);
+  color: var(--jaune-soleil);
   font-weight: 500;
   margin-top: 1rem;
 }
