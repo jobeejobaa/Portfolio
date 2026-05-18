@@ -27,6 +27,30 @@ const PROJECTS = [
   },
   {
     id: 2,
+    image: "/projets/dune-carle-cros.png",
+    titre: "Dune Carle Cros - Site portfolio artiste",
+    contexte:
+      "Site portfolio web réalisé pour une cliente réelle, l'artiste muraliste Dune Carle Cros (fresques monumentales, vitrines de prestige, graffiti). L'objectif était de mettre en valeur ses œuvres et ses collaborations avec des marques prestigieuses (Grand Seiko Place Vendôme, Tasaki Londres/Monaco, Kenzo, Casa Barbara...).",
+    stackTechnique: "HTML - CSS - Vercel",
+    fonctionnalites: [
+      "Galerie d'œuvres organisée par catégories (Murs & Fresques, Vitrines, Expos, Festivals, Atelier, Custom)",
+      "Navigation par sections : Œuvres, Artiste, Clients, Contact",
+      "Section biographie avec chiffres clés (15+ années d'expérience, 100+ projets)",
+      "Section références clients (Grand Seiko, Tasaki, Kenzo, Casa Barbara, Maison Lepage, Franck Provost...)",
+      "Lien direct Instagram et contact mail/téléphone",
+      "Mise en page responsive mobile / tablette / desktop",
+    ],
+    role: "Conception et intégration complète du site : maquettage, choix graphiques, intégration HTML/CSS, déploiement sur Vercel. Projet géré de A à Z en autonomie, en itération directe avec la cliente.",
+    difficultes:
+      "Organiser une grande quantité d'images (centaines d'œuvres réparties en sous-catégories) avec une navigation fluide et une UX cohérente, tout en gardant un code propre et maintenable sans framework.",
+    linkHref: "https://dune-portfolio.vercel.app/",
+    linkLabel: "Voir le site",
+    lienDemo: "https://dune-portfolio.vercel.app/",
+    couleur: "jaune",
+    tags: ["Client réel", "Galerie", "Vercel"],
+  },
+  {
+    id: 3,
     image: "/projets/apnea-flow.png",
     titre: "Apnea Flow - Plateforme fullstack de gestion de cours d'apnée",
     contexte:
@@ -50,7 +74,7 @@ const PROJECTS = [
     tags: ["Auth JWT", "Polling temps réel", "Vercel + Railway"],
   },
   {
-    id: 3,
+    id: 4,
     image: "/projets/ocean-katz.png",
     titre: "The Ocean Katz - site vitrine personnel",
     contexte:
