@@ -20,7 +20,6 @@ const PROJECTS = [
     difficultes:
       "Sécurisation du panel administrateur via Devise : mise en place de l'authentification, gestion des rôles utilisateur/admin et protection des routes côté contrôleur (before_action) pour garantir l'intégrité des données et bloquer tout accès non autorisé.",
     linkHref: "https://github.com/jobeejobaa/template-marketplace",
-    linkLabel: "Voir sur GitHub",
     lienDemo: "https://haubergeriedepontius.com/",
     couleur: "corail",
     tags: ["MVC", "Stripe", "Admin sécurisé", "Client réel"],
@@ -43,8 +42,6 @@ const PROJECTS = [
     role: "Conception et intégration complète du site : maquettage, choix graphiques, intégration HTML/CSS, déploiement sur Vercel. Projet géré de A à Z en autonomie, en itération directe avec la cliente.",
     difficultes:
       "Organiser une grande quantité d'images (centaines d'œuvres réparties en sous-catégories) avec une navigation fluide et une UX cohérente, tout en gardant un code propre et maintenable sans framework.",
-    linkHref: "https://dune-portfolio.vercel.app/",
-    linkLabel: "Voir le site",
     lienDemo: "https://dune-portfolio.vercel.app/",
     couleur: "jaune",
     tags: ["Client réel", "Galerie", "Vercel"],
@@ -68,7 +65,6 @@ const PROJECTS = [
     difficultes:
       "Gérer deux rôles utilisateurs avec vues et permissions différentes, et implémenter le polling temps réel pour les notifications instructeurs.",
     linkHref: "https://github.com/jobeejobaa/ApneaFlow1",
-    linkLabel: "Voir sur GitHub",
     lienDemo: "https://apnea-flow1.vercel.app",
     couleur: "menthe",
     tags: ["Auth JWT", "Polling temps réel", "Vercel + Railway"],
@@ -91,8 +87,6 @@ const PROJECTS = [
     difficultes:
       "Le principal défi a été de trouver un bon équilibre entre une identité visuelle forte et une mise en page lisible sur tous les écrans, tout en gardant un code propre et facilement maintenable.",
     linkHref: "https://github.com/jobeejobaa/Ocean-Katz",
-    linkLabel: "Voir sur GitHub",
-    lienDemo: null,
     couleur: "jaune",
     tags: ["Responsive", "Design custom", "Docker"],
   },
@@ -115,7 +109,6 @@ function Projets() {
           difficultes={project.difficultes}
           linkHref={project.linkHref}
           linkLabel={project.linkLabel}
-          deploiement={project.deploiement}
           lienDemo={project.lienDemo}
           couleur={project.couleur}
           tags={project.tags}
