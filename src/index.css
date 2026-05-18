@@ -6,14 +6,14 @@
 
 :root {
   --vanille: #F8F4E8;
-  --jaune-soleil: #FFB800;
-  --corail: #FF6B6B;
+  --jaune-soleil: #3F51B5;
+  --corail: #C33764;
   --menthe: #4ECDC4;
   --bleu-nuit: #1A1A2E;
   --texte: #2D2D2D;
   --gris-bleu: #4A5568;
   --gris-clair: #E8E4E0;
-  --jaune-pale: #FFF8E7;
+  --jaune-pale: #E8EAF6;
   --corail-pale: #FFD4D4;
   --menthe-pale: #D4F4F2;
   --lavande: #E8E0F0;
@@ -217,13 +217,13 @@ section {
   margin: 0 0 2.25rem;
 }
 .hero-stack li {
-  background: white;
-  border: 1.5px solid var(--gris-clair);
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   padding: 0.28rem 0.85rem;
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--gris-bleu);
+  color: white;
 }
 
 /* Boutons */
@@ -350,10 +350,12 @@ section {
 
 /* Carte projet */
 .card {
-  background: white;
+  background: rgba(248, 244, 232, 0.85);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-radius: 14px;
   padding: 1.75rem 2rem 1.5rem;
-  border: 1.5px solid var(--gris-clair);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -368,6 +370,7 @@ section {
 .card.card--corail::before { background: var(--corail); }
 .card.card--menthe::before { background: var(--menthe); }
 .card.card--jaune::before { background: var(--jaune-soleil); }
+.card.card--noir::before  { background: var(--bleu-nuit); }
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 35px rgba(0,0,0,0.07);
@@ -387,7 +390,8 @@ section {
 }
 .card-tech.tech--corail { color: var(--corail); }
 .card-tech.tech--menthe { color: var(--menthe); }
-.card-tech.tech--jaune { color: #b07d00; }
+.card-tech.tech--jaune  { color: var(--jaune-soleil); }
+.card-tech.tech--noir   { color: var(--bleu-nuit); }
 
 .card-text {
   font-size: 0.93rem;
@@ -483,9 +487,10 @@ section {
   font-weight: 500;
   color: var(--texte);
 }
-.tag--jaune { background: var(--jaune-pale); }
+.tag--jaune  { background: var(--jaune-pale); }
 .tag--corail { background: var(--corail-pale); }
 .tag--menthe { background: var(--menthe-pale); }
+.tag--noir   { background: rgba(26, 26, 46, 0.08); }
 
 .card-links { display: flex; gap: 0.65rem; align-items: center; }
 .card-link {

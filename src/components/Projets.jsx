@@ -43,7 +43,7 @@ const PROJECTS = [
     difficultes:
       "Organiser une grande quantité d'images (centaines d'œuvres réparties en sous-catégories) avec une navigation fluide et une UX cohérente, tout en gardant un code propre et maintenable sans framework.",
     lienDemo: "https://dune-portfolio.vercel.app/",
-    couleur: "jaune",
+    couleur: "noir",
     tags: ["Client réel", "Galerie", "Vercel"],
   },
   {
