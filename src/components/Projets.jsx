@@ -92,7 +92,7 @@ const PROJECTS = [
   },
   {
     id: 5,
-    image: "/projets/jeu-10000-thumb.png",
+    image: "/projets/jeu-10000-crop.png",
     titre: "Le 10 000 - jeu de dés multijoueur en React",
     contexte:
       "Projet personnel : réinvention numérique du jeu de dés du 10 000. L'app détecte le mouvement du téléphone pour lancer les dés (comme si on les secouait vraiment), propose un mode feuille de score pour jouer avec de vrais dés, et un mode en ligne multijoueur temps réel via Firebase.",
