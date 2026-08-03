@@ -90,6 +90,28 @@ const PROJECTS = [
     couleur: "jaune",
     tags: ["Responsive", "Design custom", "Docker"],
   },
+  {
+    id: 5,
+    image: "/projets/jeu-10000-thumb.png",
+    titre: "Le 10 000 - jeu de dés multijoueur en React",
+    contexte:
+      "Projet personnel : réinvention numérique du jeu de dés du 10 000. L'app détecte le mouvement du téléphone pour lancer les dés (comme si on les secouait vraiment), propose un mode feuille de score pour jouer avec de vrais dés, et un mode en ligne multijoueur temps réel via Firebase.",
+    stackTechnique: "React 19 - Vite - Firebase Realtime Database - Vitest - Vite PWA - Vercel",
+    fonctionnalites: [
+      "Lancer de dés par détection de mouvement (Device Motion API, avec gestion de la permission iOS)",
+      "3 modes de jeu : local sur un téléphone, feuille de score avec de vrais dés, ou partie en ligne multijoueur (Firebase)",
+      "Moteur de scoring complet du 10 000 (brelans, suites, dés isolés, hot dice) entièrement testé en unitaire (Vitest)",
+      "Bot IA jouant avec une vraie stratégie (seuils adaptatifs selon les dés restants et le score)",
+      "Gestion des farkles consécutifs avec pénalité triple farkle, historique des parties, reprise de partie sauvegardée",
+    ],
+    role: "Conception et développement complet en autonomie : logique de jeu pure et testée (scoring, état de partie, bot), hook custom de détection de mouvement, synchronisation temps réel Firebase pour le mode en ligne, déploiement Vercel.",
+    difficultes:
+      "Modéliser une logique de scoring pure et testable (nombreuses combinaisons de dés, hot dice, farkles) tout en la partageant à l'identique entre le mode solo/local et le mode multijoueur Firebase, sans dupliquer les règles.",
+    linkHref: "https://github.com/jobeejobaa/10000",
+    lienDemo: "https://10000-tau.vercel.app/",
+    couleur: "corail",
+    tags: ["React", "Firebase", "Multijoueur", "Device Motion", "Tests unitaires"],
+  },
 ]
 
 function Projets() {
